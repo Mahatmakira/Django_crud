@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <h1>Detalles de la tarea</h1>
+    {{error}}
+    <form method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button>
+            Modificar
+        </button>
+    </form>
+    <form action="{% url 'task_complete' task.id %}" method="POST">
+        {% csrf_token %}
+        <button>
+            Complete
+        </button>
+    </form>
+    <form action="{% url 'task_delete' task.id %}" method="POST">
+        {% csrf_token %}
+        <button>
+            Delete
+        </button>
+    </form>
+   
+
+{% endblock %}
+<!--<h2>{% if task.importante == True %} ❌  {% else %} ✅ {% endif %} {{task.title}}</h2>
+    {% if task.important == True %}
+        <p>Tarea importante</p>
+    {% else %}
+        <p>Tarea Basura</p>
+    {% endif %}
+    <p> Descripción: {{task.descripcion}}</p>
+    <p> Usuario: {{task.user.username}}</p>-->

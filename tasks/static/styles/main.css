@@ -1,0 +1,49 @@
+body {
+    background: #202020;
+    color: white;
+}
+
+.navbar {
+    background: #404040;
+    padding: auto;
+}
+
+.navbar ul {
+    display: -moz-popup;
+    justify-content: space-between;
+    padding: auto;
+}
+
+.navbar ul li {
+    padding: auto;
+    justify-content: space-between;
+} 
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;  
+    padding: auto;
+}
+
+.navbar ul li a:hover {
+    color: blue;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 10px 1px;
+}
+
+.card{
+    background: white;
+    padding: 10px;
+    margin-bottom: 2px;
+    color: black;
+}
+
+.input {
+    background: wheat;
+    padding: 10px;
+    text-align: center;
+}
